@@ -1,4 +1,14 @@
-EVOLUSI OS:
+# Workshop-Administrasi-Jaringan
+
+Nama : Muhammad Fajrul Falah Subakti\
+NRP : 3121600035\
+Kelas : 2 D4 IT B\
+Mata Kuliah : Workshop-Administrasi-Jaringan\
+Dosen Pengampu : Dr. Ferry Astika Saputra ST, M.Sc
+
+---
+
+## Evolusi OS:
 Evolusi OS (Operating System) adalah proses perubahan yang terjadi pada sistem operasi dari waktu ke waktu. OS adalah perangkat lunak yang mengelola sumber daya komputer dan memungkinkan interaksi antara pengguna dan perangkat keras komputer. Evolusi OS terjadi karena adanya perubahan dalam teknologi komputer dan kebutuhan pengguna.
 
 Sejak diciptakannya komputer pertama pada tahun 1940-an, OS telah mengalami banyak perubahan. Pada awalnya, OS hanya dapat digunakan oleh para ahli komputer dan sangat terbatas dalam fungsinya. Namun, dengan perkembangan teknologi, OS menjadi lebih kompleks dan dapat digunakan oleh banyak orang dengan berbagai kebutuhan.
@@ -11,8 +21,9 @@ Dalam dekade terakhir, OS telah berkembang dengan cepat dan terus mengalami peru
 
 Dalam kesimpulannya, evolusi OS terus berlanjut seiring dengan kemajuan teknologi. OS terbaru mampu memberikan pengalaman yang lebih mudah, cepat, dan aman bagi pengguna dan memungkinkan komputer dan perangkat seluler menjadi lebih terkoneksi dan terintegrasi dengan dunia digital.
 
+---
 
-Perintah Su dan Sudo:
+## Perintah Su dan Sudo:
 
 Perintah su dan sudo adalah perintah yang digunakan pada sistem operasi Linux dan Unix untuk memperoleh hak akses superuser atau root.
 
@@ -32,29 +43,29 @@ Perintah di atas memungkinkan pengguna untuk menjalankan perintah apt-get update
 
 Perbedaan utama antara su dan sudo adalah bahwa su memungkinkan pengguna untuk beralih ke akun root sepenuhnya, sedangkan sudo memberikan hak akses superuser pada perintah tertentu saja. Penggunaan sudo lebih disarankan karena lebih aman dan mengurangi risiko penggunaan yang salah dan tidak sengaja melakukan perintah yang merusak sistem.
 
+---
 
-
+## Package Maintenance
 Package maintenance pada Linux Ubuntu adalah proses memperbarui, menginstal, dan menghapus paket perangkat lunak pada sistem operasi Ubuntu. Paket perangkat lunak adalah kumpulan file yang terdiri dari program, konfigurasi, dan sumber daya lain yang terkait dengan program tertentu. Sistem manajemen paket di Ubuntu menggunakan Advanced Packaging Tool (APT) untuk mengelola paket perangkat lunak.
 
-Berikut adalah beberapa perintah penting yang digunakan dalam package maintenance di Linux Ubuntu:
+Berikut adalah beberapa perintah penting yang digunakan dalam package maintenance di Linux Ubuntu:\
+`sudo apt update` - perintah ini digunakan untuk memperbarui indeks paket perangkat lunak pada sistem. Ini memperbarui informasi paket dari repositori yang tersedia, termasuk paket baru yang tersedia untuk diinstal.
 
-sudo apt update - perintah ini digunakan untuk memperbarui indeks paket perangkat lunak pada sistem. Ini memperbarui informasi paket dari repositori yang tersedia, termasuk paket baru yang tersedia untuk diinstal.
+`sudo apt upgrade` - perintah ini digunakan untuk memperbarui semua paket yang telah diinstal pada sistem.
 
-sudo apt upgrade - perintah ini digunakan untuk memperbarui semua paket yang telah diinstal pada sistem.
+`sudo apt install [nama-paket]` - perintah ini digunakan untuk menginstal paket perangkat lunak baru pada sistem.
 
-sudo apt install [nama-paket] - perintah ini digunakan untuk menginstal paket perangkat lunak baru pada sistem.
+`sudo apt remove [nama-paket]` - perintah ini digunakan untuk menghapus paket perangkat lunak dari sistem.
 
-sudo apt remove [nama-paket] - perintah ini digunakan untuk menghapus paket perangkat lunak dari sistem.
-
-sudo apt autoremove - perintah ini digunakan untuk menghapus paket perangkat lunak yang tidak diperlukan lagi pada sistem.
+`sudo apt autoremove` - perintah ini digunakan untuk menghapus paket perangkat lunak yang tidak diperlukan lagi pada sistem.
 
 Selain itu, Ubuntu juga menyediakan software center atau pusat perangkat lunak grafis yang memudahkan pengguna untuk mencari dan menginstal paket perangkat lunak yang dibutuhkan dengan antarmuka grafis yang mudah digunakan.
 
 Dalam menjalankan proses package maintenance, sangat penting untuk memastikan bahwa paket perangkat lunak yang diinstal selalu diperbarui dengan versi terbaru dan tercukupi keamanan perangkat lunak. Hal ini dapat dilakukan dengan secara rutin melakukan update dan upgrade sistem, serta menginstal paket perangkat lunak dari sumber yang terpercaya.
 
+---
 
-
-
+## Ubuntu Repository
 Repository pada Ubuntu adalah tempat penyimpanan online yang berisi paket perangkat lunak yang dapat diinstal pada sistem Ubuntu. Paket-paket tersebut dapat diinstal melalui perintah apt-get atau software center dengan bantuan sumber daya dari repository. Ada beberapa repository yang telah tersedia pada Ubuntu, dan juga bisa menambahkan repository pihak ketiga yang menawarkan paket perangkat lunak tambahan.
 
 Berikut adalah cara untuk menambahkan repository pada Ubuntu:
@@ -80,7 +91,12 @@ Untuk mengatur repository di Ubuntu, langkah-langkahnya adalah sebagai berikut:
 8. Kemudian, jalankan perintah "sudo apt-get update" untuk memperbarui daftar repository Ubuntu dengan repository baru yang telah ditambahkan.
 9. Setelah itu, Anda dapat menggunakan perintah "sudo apt-get install" untuk menginstal paket atau program yang tersedia pada repository yang telah ditambahkan.
 
+Output:
+![](2023-03-04-13-02-18.png)
 
+---
+
+## Ubuntu Multiverse
 Multiverse adalah salah satu komponen dari repository Ubuntu yang menyediakan paket perangkat lunak bebas dan terbuka yang tidak dapat didistribusikan di seluruh dunia karena alasan hukum atau lisensi. Paket-paket ini seringkali berisi kode atau konten yang dilindungi hak cipta, paten, atau hak kekayaan intelektual lainnya.
 
 Paket-paket di dalam komponen multiverse tidak diinstal secara otomatis pada Ubuntu, tetapi pengguna dapat mengakses dan menginstalnya dengan menambahkan multiverse ke dalam sumber perangkat lunak pada sistem. Untuk menambahkan multiverse ke dalam sumber perangkat lunak, pengguna dapat mengikuti langkah-langkah berikut:
@@ -94,8 +110,9 @@ Setelah itu, pengguna dapat mencari dan menginstal paket perangkat lunak yang te
 
 Penting untuk diingat bahwa paket perangkat lunak di dalam multiverse mungkin tidak sepenuhnya terbuka, dan pengguna harus memperhatikan lisensi dan aturan penggunaan untuk setiap paket yang diinstal dari multiverse.
 
+---
 
-
+## Ubuntu APT
 Apt (atau Advanced Package Tool) adalah sebuah sistem manajemen paket pada distribusi Linux, termasuk pada sistem operasi Ubuntu dan Debian. Apt digunakan untuk mengelola paket perangkat lunak pada sistem dan memungkinkan pengguna untuk dengan mudah menginstal, menghapus, dan memperbarui perangkat lunak yang ada pada sistem.
 
 Apt bekerja dengan menggunakan file sumber perangkat lunak, yaitu file yang berisi daftar paket perangkat lunak yang tersedia untuk diinstal pada sistem. File sumber ini disimpan di dalam repository, yaitu server online yang menyediakan paket perangkat lunak untuk diunduh dan diinstal. Repository pada Ubuntu biasanya terdiri dari beberapa komponen, seperti main, universe, restricted, dan multiverse.
@@ -112,11 +129,10 @@ Apt juga dapat digunakan dengan antarmuka grafis, seperti Ubuntu Software Center
 
 Dalam keseluruhan, Apt merupakan alat yang sangat berguna untuk mengelola paket perangkat lunak pada sistem operasi Ubuntu dan membantu pengguna untuk memperbarui, menginstal, dan menghapus perangkat lunak dengan mudah dan efisien.
 
+---
 
-
-Instalasi Package:
-
-MC
+# Instalasi Package:
+## MC
 
 MC adalah singkatan dari Midnight Commander, yaitu sebuah program manajer file berbasis teks yang tersedia di berbagai sistem operasi Linux. Program ini memungkinkan pengguna untuk mengelola dan mengorganisir file dan direktori pada sistem dengan antarmuka yang mudah digunakan dan berbasis pada mode teks.
 
@@ -135,8 +151,12 @@ Setelah berhasil diinstal, pengguna dapat membuka Midnight Commander dengan meng
 
 Secara keseluruhan, MC adalah program manajer file yang kuat dan fleksibel yang dapat membantu pengguna Linux dalam mengorganisir dan mengelola file pada sistem dengan mudah dan efisien.
 
+Output:
+![](2023-03-04-13-03-10.png)
 
-Net tools
+---
+
+## Net tools
 
 Net-tools adalah sebuah package perangkat lunak pada sistem operasi Linux yang terdiri dari serangkaian utilitas jaringan dasar yang digunakan untuk mengelola jaringan pada sistem. Package ini mencakup beberapa perintah yang berguna untuk mendiagnosis dan mengkonfigurasi jaringan pada sistem, seperti ifconfig, netstat, arp, dan route.
 
@@ -153,9 +173,9 @@ Net-tools biasanya sudah terinstal secara default pada banyak distribusi Linux, 
 
 Secara keseluruhan, package net-tools adalah kumpulan utilitas jaringan dasar yang berguna untuk mengelola dan mendiagnosis jaringan pada sistem operasi Linux.
 
+---
 
-Htop
-
+## Htop
 HTOP adalah package perangkat lunak open-source yang merupakan alternatif dari perintah top pada sistem operasi Linux. Perintah top digunakan untuk menampilkan informasi terkini tentang penggunaan sumber daya pada sistem, seperti pemakaian CPU, pemakaian RAM, dan informasi tentang proses yang sedang berjalan.
 
 HTOP memperluas fungsionalitas top dengan menambahkan antarmuka pengguna yang lebih interaktif dan informatif. Dalam tampilan HTOP, pengguna dapat melihat informasi tentang penggunaan CPU dan RAM pada sistem dalam bentuk grafis, serta mengelola proses yang sedang berjalan dengan mudah menggunakan shortcut keyboard.
@@ -177,3 +197,6 @@ sudo apt-get install htop
 Setelah berhasil diinstal, pengguna dapat membuka HTOP dengan mengetikkan perintah htop pada terminal.
 
 Secara keseluruhan, HTOP adalah package perangkat lunak yang sangat berguna untuk memantau dan mengelola proses pada sistem operasi Linux, dengan antarmuka pengguna yang lebih interaktif dan informatif daripada perintah top bawaan pada Linux.
+
+Output:
+![](2023-03-04-13-04-19.png)
