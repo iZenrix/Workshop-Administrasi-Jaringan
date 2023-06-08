@@ -25,7 +25,26 @@ Alan Tri Arbani Hidayat 3121600056<br>
 3.  **Dovecot** adalah server email IMAP dan POP3 open source untuk sistem Linux / UNIX, yang ditulis dengan mengutamakan keamanan. Dovecot adalah pilihan yang sangat baik untuk instalasi kecil dan besar. Cepat, mudah diatur, tidak memerlukan administrasi khusus dan hanya menggunakan sedikit RAM/memori.
    
 4.  **Roundcube** adalah email client IMAP berbasis web. Fitur Roundcube yang paling menonjol adalah penggunaan teknologi Ajax. Salah satu software open source yang berlisensi GNU General Public License (GPL).
+   
+5. **MX Records** Fungsi utama MX record adalah untuk mengarahkan aliran email ke server email yang tepat. Ketika seseorang mengirim email ke alamat yang menggunakan domain tertentu, server pengirim akan mengacu pada MX record untuk menentukan server email tujuan yang harus menerima email tersebut. Dalam hal ini, MX record mengonfigurasi aliran email dan membantu pengiriman email ke tujuan yang benar
 
+### **Konfigurasi DNS MX Records**
+#
+Buka konfigurasi zone forward dns
+```
+sudo nano /var/cache/bind/<nama-file-forward>
+```
+
+tambahkan mx record seperti gambar dibawah lalu simpan perubahan
+<img src="./gambar/mxrecord.png"/><br>
+
+jangan lupa untuk reload bind9
+```
+sudo systemctl reload named
+```
+
+Testing apakah mx record sudah terdaftar (disini screenshoot diambil dari local seharusnya address menggunakan **192.168.2.10**)
+<img src="./gambar/test mx record.png"/><br>
 
 ### **Konfigurasi Postfix dan Dovecot**
 #
@@ -52,7 +71,11 @@ Sebelum memulai install mail server, ada baiknya siapkan domain khusus yang akan
     #tambahkan baris berikut pada baris paling bawah
     home_mailbox = Maildir/
     ```
-
+    tambahkan default route pada konfigurasi mynetworks agar bisa mengirim ke alamat yang sudah ada pada **mxrecord**
+    ```
+    mynetworks = 0.0.0.0/0
+    ```
+    <img src="./gambar/mynetworks.png"/><br>
     buat mail directory di directory /etc/skel
     ```
     maildirmake.dovecot /etc/skel/Maildir
@@ -319,8 +342,14 @@ Sebelum memulai install mail server, ada baiknya siapkan domain khusus yang akan
 - Selanjutnya buka web browser pada sisi client dan masukkan domain dari mail server (**mail.kampus-02.takehome.com**), maka akan muncul interface dari roundcube. Lalu login menggunakan salah satu user yang telah dibuat.
   <img src="./gambar/login satu.png"/><br>
 
-  Klik pada compose dan isikan pesan untuk user lainnya. Lalu klik send.
-  <img src="./gambar/send mail.png"/><br>
+  Klik pada compose dan isikan pesan untuk user **(ikmall@mai.kampus-05.takehome.com)** lainnya. Lalu klik send.
+  <img src="./gambar/send ikmal.png"/><br>
 
-  Logout dan login ke user penerima, maka akan muncul pesan yang dikirim.
-  <img src="./gambar/user dua.png"/><br>
+  pastikan email benar benar terkirim dengan mengecek pada tab mail sent
+  <img src="./gambar/send ikmal success.png"/><br>
+
+  Dan ini adalah tampilan ketika user menerima sebuah email dari user **(ikmall@mai.kampus-05.takehome.com)**
+  <img src="./gambar/get mail.png"/><br>
+
+  Klik email untuk detail isinya
+  <img src="./gambar/get mail detail.png"/><br>
